@@ -1,0 +1,58 @@
+
+<?php $__env->startSection('title'); ?>
+My Laravel Application
+<?php $__env->stopSection(); ?>
+<?php $__env->startSection('content'); ?>
+<div class="container">
+    <div class="row">
+        <div class="panel-group" id="accordion">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                            Semester Ganjil
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapseOne" class="panel-collapse collapse">
+                    <div class="panel-body">
+
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                            Semester Genap
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapseTwo" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <ul id="myTab" class="nav nav-tabs">
+                            <li class="active"><a href="#ii" data-toggle="tab">Semester II</a></li>
+                            <li class=""><a href="#iv" data-toggle="tab">Semester IV</a></li>
+                            <li class=""><a href="#vi" data-toggle="tab">Semester VI</a></li>
+                            <li class=""><a href="#viii" data-toggle="tab">Semester VIII</a></li>
+                        </ul>
+                        <div class="tab-pane fade active in" id="ii">
+                            <?php
+                            foreach ($mk as $mk2) {
+                                ?>
+                                <a style = "padding:7px; margin:7px;" class = "btn btn-danger" href = "<?php echo $mk2['dir']; ?>/index.php?kode_mk=<?php echo $mk2['kode_mk'] ?>"><i class = "menu-tombol"></i><br/>
+                                <?php echo $mk2['nama_mk'];
+                                ?>
+                                </a>
+                                <?php
+                            }
+                            ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layout.bootstrap3.index', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

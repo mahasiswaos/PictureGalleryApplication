@@ -1,0 +1,7 @@
+<div class="jumbotron effect2">
+    <h1><span class="glyphicon glyphicon-book"></span> Kegiatan Mahasiswa</h1>
+    <p>Merupakan Aplikasi Web tentang kegiatan mahasiswa berbasis WEB menggunakan Framework Laravel</p>
+    <p>
+        <a class="btn btn-lg btn-primary" href="../../components/#navbar" role="button">View navbar docs »</a>
+    </p>
+</div>

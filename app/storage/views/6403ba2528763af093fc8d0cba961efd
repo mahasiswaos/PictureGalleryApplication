@@ -1,0 +1,5 @@
+<link href="<?php echo URL::to('css/bootstrap.css');?>" rel="stylesheet" type="text/css">
+<link href="<?php echo URL::to('css/bootstrap-theme.css');?>" rel="stylesheet" type="text/css">
+<link href="<?php echo URL::to('css/carousel.css');?>" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="<?php echo URL::to('vlb_files1/vlightbox1.css');?>" type="text/css" />
+<link rel="stylesheet" href="<?php echo URL::to('vlb_files1/visuallightbox.css');?>" type="text/css" media="screen" />

@@ -1,0 +1,73 @@
+
+<?php $__env->startSection('title'); ?>
+My Laravel Application
+<?php $__env->stopSection(); ?>
+<?php $__env->startSection('content'); ?>
+<div class="container">
+    <?php foreach ($gambar as $value) {
+        ?>
+        <div class="row">
+
+            <div class="col-lg-12">
+                <h1 class="page-header">Welcome
+                    <small>In Username Gallery</small>
+                </h1>
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <div class="col-lg-6 col-md-6 well effect2">
+                <a href="#">
+                    <img class="img-responsive" src="<?php echo URL::to('img/'.$value['nama_file']); ?>" alt="">
+            </a>
+        </div>
+
+        <div class="col-lg-6 col-md-6">
+            <h3><?php echo $value['judul']; ?></h3>
+            <h4>Kategori : <?php echo $value['kategori']; ?>, Lokasi : <?php echo $value['nama_lokasi'].",".$value['kabupaten']; ?></h4>
+            <p><?php echo $value['deskripsi']; ?></p>
+            <a class="btn btn-primary" href="#">Lihat Layar Penuh <span class="glyphicon glyphicon-chevron-right"></span></a>
+        </div>
+
+    </div>
+
+    <hr>
+    <?php } ?>
+    <div class="row text-center">
+
+        <div class="col-lg-12">
+            <ul class="pagination">
+                <li><a href="#">«</a>
+                </li>
+                <li class="active"><a href="#">1</a>
+                </li>
+                <li><a href="#">2</a>
+                </li>
+                <li><a href="#">3</a>
+                </li>
+                <li><a href="#">4</a>
+                </li>
+                <li><a href="#">5</a>
+                </li>
+                <li><a href="#">»</a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+    <hr>
+
+    <footer>
+        <div class="row">
+            <div class="col-lg-12">
+                <p>Copyright © Company 2013</p>
+            </div>
+        </div>
+    </footer>
+
+</div>
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layout.bootstrap3.gambar', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
